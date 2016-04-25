@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3C7D6F9F-DD85-470E-A25C-A117E236EE0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InvoiceMaker</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>InvoiceMaker</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib.Portable">
+      <HintPath>..\packages\SharpZipLib.Portable.0.86.0.0003\lib\portable-net45+netcore45+wp8+win8+wpa81+MonoTouch+MonoAndroid+Xamarin.iOS10\ICSharpCode.SharpZipLib.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless">
+      <HintPath>..\packages\Stateless.2.5.21.0\lib\portable-net40+sl50+win+wp80\Stateless.dll</HintPath>
+    </Reference>
+    <Reference Include="cbforest-sharp">
+      <HintPath>..\packages\Couchbase.Lite.1.2.0.3\lib\MonoAndroid\cbforest-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Couchbase.Lite">
+      <HintPath>..\packages\Couchbase.Lite.1.2.0.3\lib\MonoAndroid\Couchbase.Lite.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NewInvoiceActivity.cs" />
+    <Compile Include="DocumentManager.cs" />
+    <Compile Include="Buchungszeilen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\NewInvoice.axml" />
+    <AndroidResource Include="Resources\menu\InvoiceMakerMenu.xml" />
+    <AndroidResource Include="Resources\drawable\ic_new.png" />
+    <AndroidResource Include="Resources\values\styles_example.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_bottom_solid_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_solid_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_stacked_solid_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_texture_tile_example.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ab_transparent_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_default_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_cab_done_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_bottom_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cab_background_top_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\list_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\menu_dropdown_panel_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_bg_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_primary_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\progress_secondary_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_default_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_disabled_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\spinner_ab_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_selected_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_focused_example.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tab_unselected_pressed_example.9.png" />
+    <AndroidResource Include="Resources\drawable\ab_background_textured_example.xml" />
+    <AndroidResource Include="Resources\drawable\btn_cab_done_example.xml" />
+    <AndroidResource Include="Resources\drawable\progress_horizontal_example.xml" />
+    <AndroidResource Include="Resources\drawable\selectable_background_example.xml" />
+    <AndroidResource Include="Resources\drawable\spinner_background_ab_example.xml" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_ab_example.xml" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\example_btn_default_holo_light.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\example_btn_default_disabled_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\example_btn_default_disabled_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\example_btn_default_focused_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\example_btn_default_normal_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\example_btn_default_pressed_holo_light.9.png" />
+    <AndroidResource Include="Resources\drawable\ic_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Assets\Content\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\Couchbase.Lite.Storage.SystemSQLite.1.2\build\MonoAndroid\Couchbase.Lite.Storage.SystemSQLite.targets" Condition="Exists('..\packages\Couchbase.Lite.Storage.SystemSQLite.1.2\build\MonoAndroid\Couchbase.Lite.Storage.SystemSQLite.targets')" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Home.html" />
+  </ItemGroup>
+</Project>

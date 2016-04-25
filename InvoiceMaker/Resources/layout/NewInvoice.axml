@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4">
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:id="@+id/editTextNummer"
+            android:hint="Rechnungsnummer"
+            android:inputType="number" />
+        <EditText
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editTextDatum" />
+    </LinearLayout>
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextFirma"
+        android:capitalize="words"
+        android:hint="Firma" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextStrasseOrt"
+        android:capitalize="words"
+        android:hint="Strasse/Ort" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2">
+        <EditText
+            android:id="@+id/editTextProdukt"
+            android:capitalize="sentences"
+            android:hint="Produkt"
+            android:layout_width="240dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <EditText
+            android:inputType="number"
+            android:layout_width="98.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/editTextAnzahl"
+            android:layout_marginRight="0.0dp"
+            android:numeric="integer"
+            android:textAlignment="center"
+            android:hint="Anzahl" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:layout_width="142.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/editTextPreis"
+            android:textAlignment="center"
+            android:hint="Preis "
+            android:layout_marginBottom="1.5dp" />
+        <Button
+            android:text="OK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonConfirm"
+            android:background="@drawable/example_btn_default_pressed_holo_light" />
+    </LinearLayout>
+    <Button
+        android:text="Rechnung erstellen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCreateInvoice"
+        android:background="@drawable/example_btn_default_pressed_holo_light" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webViewRechnung" />
+</LinearLayout>
